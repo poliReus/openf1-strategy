@@ -1,0 +1,22 @@
+# --- Core Ingestion ---
+requests==2.32.3        # REST client for OpenF1
+websockets==12.0        # WebSocket client (later for live data)
+confluent-kafka==2.5.0  # Kafka producer/consumer
+
+# --- Data Handling ---
+pyarrow==17.0.0         # Arrow schema & Parquet interface
+pydantic==2.9.2         # Data validation / schema enforcement
+python-dotenv==1.0.1    # Load .env config
+
+# --- Testing ---
+pytest==8.3.3
+
+# --- Dev Tools / Quality (Phase 0) ---
+black==24.8.0           # Code formatter
+ruff==0.6.9             # Linter
+mypy==1.11.2            # Type checker
+pre-commit==3.8.0       # Git hooks manager
+
+pandas==2.2.1            # Data manipulation & analysis
+fastapi==0.115.0
+uvicorn[standard]==0.30.1
