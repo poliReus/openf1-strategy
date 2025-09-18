@@ -1,8 +1,19 @@
 from fastapi import FastAPI, HTTPException
 from api.state import get_driver_options, get_all_options
 from api.consumer import start_consumer_thread
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="LiveF1Strategy API")
+
+
+# Allow frontend (localhost:5173) to call API
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 # Start Kafka consumer thread at startup

@@ -1,4 +1,51 @@
-.venv/
-.python-version
+# --- Python ---
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+coverage/
+htmlcov/
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+.micromamba/
+.conda/
+.conda_env/
+
+# --- Node / Frontend ---
+frontend/node_modules/
+frontend/.vite/
+frontend/dist/
+*.log
+
+# --- Docker / Compose ---
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Local data ---
 parquet_output/
+uploads/
+.cache/
+tmp/

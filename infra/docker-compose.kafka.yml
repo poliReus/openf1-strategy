@@ -1,3 +1,4 @@
+name: openf1-strategy
 services:
   redpanda:
     image: redpandadata/redpanda:latest

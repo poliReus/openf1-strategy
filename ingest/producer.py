@@ -1,9 +1,11 @@
 import json
 from confluent_kafka import Producer
+import os
 
 
 def make_producer(bootstrap: str = "localhost:9092"):
-    return Producer({"bootstrap.servers": bootstrap})
+    bootstrap_servers = os.getenv("KAFKA_BOOTSTRAP", "localhost:9092")
+    return Producer({"bootstrap.servers": bootstrap_servers})
 
 
 def publish_record(producer, topic: str, record: dict):
